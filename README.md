@@ -1,15 +1,15 @@
 # DATAGO
 
-DATAGO is a mobile-first MTN data bundle storefront.
+Simple MTN data bundle ordering website.
 
-## Current version
-- 12 bundle packages
-- Mobile-friendly design
-- Bundle selection
-- MTN number validation
-- Customer email field
-- Manual delivery promise: 1–10 minutes
-- Payment placeholder ready for Paystack integration
+## Current order flow
+1. Customer selects a bundle.
+2. Customer enters the MTN number and email.
+3. Customer taps **SEND ORDER**.
+4. The order details are prepared and routed to DATAGO's WhatsApp for processing.
+5. DATAGO confirms payment manually and delivers the bundle.
+
+Payment gateway integration can be added later without changing the customer-facing bundle catalogue.
 
 ## Important
-Do not put a Paystack secret key in `script.js` or any browser-side file. A secure backend/serverless function is required for secret-key operations.
+This is a static GitHub Pages site. No Paystack secret key or other private API key should be placed in the browser code.

@@ -10,7 +10,7 @@
 <body>
   <header class="topbar">
     <div class="brand">DATA<span>GO</span></div>
-    <a class="status" href="#bundles">Buy Data</a>
+    <div class="top-actions"><a class="whatsapp" href="https://wa.me/233505002562" target="_blank" rel="noopener">WhatsApp</a><a class="status" href="#bundles">Buy Data</a></div>
   </header>
 
   <main>
@@ -44,7 +44,7 @@
         <div>
           <p class="eyebrow">ORDER DETAILS</p>
           <h2>Almost there.</h2>
-          <p class="muted">Enter the number that should receive the data. Check it carefully before paying.</p>
+          <p class="muted">Enter the number that should receive the data. Check it carefully before sending your order.</p>
         </div>
 
         <form id="orderForm">
@@ -64,8 +64,9 @@
             <strong id="total">GH₵0.00</strong>
           </div>
 
-          <button class="primary-btn full" type="submit">Continue to Payment</button>
-          <p class="small">Secure payment will be connected through Paystack. Your card/mobile-money details are not entered on this page.</p>
+          <button class="primary-btn full" type="submit">SEND ORDER</button>
+          <p id="formMessage" class="small order-message" aria-live="polite"></p>
+          <p class="small">Your order details will be sent to DATAGO for processing. Payment and delivery will be confirmed with you.</p>
         </form>
       </div>
     </section>
@@ -74,7 +75,7 @@
   <footer>
     <div class="brand">DATA<span>GO</span></div>
     <p>Affordable MTN data. Anytime, anywhere.</p>
-    <p class="small">Manual delivery: 1–10 minutes after successful payment.</p>
+    <p class="small">Manual delivery: 1–10 minutes after successful payment.</p><p class="contact">WhatsApp: <a href="https://wa.me/233505002562" target="_blank" rel="noopener">0505002562</a></p>
   </footer>
 
   <script src="script.js"></script>
