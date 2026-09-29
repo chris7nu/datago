@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DATAGO - Affordable MTN data bundles with fast manual delivery within 1–10 minutes.">
+  <title>DATAGO | MTN Data Bundles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">DATA<span>GO</span></div>
+    <a class="status" href="#bundles">Buy Data</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MTN DATA BUNDLES</p>
+        <h1>Affordable data.<br><span>Delivered fast.</span></h1>
+        <p>Choose your bundle, enter your MTN number and place your order. Manual delivery is completed within <strong>1–10 minutes</strong>.</p>
+        <a class="primary-btn" href="#bundles">Choose a Bundle</a>
+      </div>
+      <div class="hero-card">
+        <div class="bolt">⚡</div>
+        <strong>1–10 min</strong>
+        <small>Typical delivery time</small>
+      </div>
+    </section>
+
+    <section id="bundles" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">AVAILABLE PACKAGES</p>
+          <h2>Choose your data</h2>
+        </div>
+        <p>MTN only</p>
+      </div>
+      <div id="bundleGrid" class="bundle-grid"></div>
+    </section>
+
+    <section id="order" class="order-section">
+      <div class="order-card">
+        <div>
+          <p class="eyebrow">ORDER DETAILS</p>
+          <h2>Almost there.</h2>
+          <p class="muted">Enter the number that should receive the data. Check it carefully before paying.</p>
+        </div>
+
+        <form id="orderForm">
+          <label for="bundle">Selected bundle</label>
+          <select id="bundle" required></select>
+
+          <label for="phone">MTN number</label>
+          <input id="phone" type="tel" inputmode="numeric" placeholder="e.g. 0241234567" maxlength="10" required>
+
+          <label for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com" required>
+
+          <div class="notice">⚠️ Please confirm the MTN number is correct. Data sent to an incorrect number may not be recoverable.</div>
+
+          <div class="summary">
+            <span>Total</span>
+            <strong id="total">GH₵0.00</strong>
+          </div>
+
+          <button class="primary-btn full" type="submit">Continue to Payment</button>
+          <p class="small">Secure payment will be connected through Paystack. Your card/mobile-money details are not entered on this page.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">DATA<span>GO</span></div>
+    <p>Affordable MTN data. Anytime, anywhere.</p>
+    <p class="small">Manual delivery: 1–10 minutes after successful payment.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
