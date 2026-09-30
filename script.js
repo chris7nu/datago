@@ -38,6 +38,11 @@ function updateTotal() {
 
 select.addEventListener("change", updateTotal);
 
+const paymentPanel = document.getElementById("paymentPanel");
+const paymentAmount = document.getElementById("paymentAmount");
+const paidButton = document.getElementById("paidButton");
+const paymentSuccess = document.getElementById("paymentSuccess");
+
 document.getElementById("orderForm").addEventListener("submit", (e) => {
   e.preventDefault();
   const phone = document.getElementById("phone").value.trim();
@@ -53,24 +58,18 @@ document.getElementById("orderForm").addEventListener("submit", (e) => {
     return;
   }
 
-  const orderMessage = [
-    "DATAGO NEW ORDER",
-    "--------------------",
-    `Bundle: ${item[0]}`,
-    `Amount: GH₵${item[1].toFixed(2)}`,
-    `MTN Number: ${phone}`,
-    `Customer Email: ${email}`,
-    "--------------------",
-    "Please confirm this order."
-  ].join("\n");
+  paymentAmount.textContent = `GH₵${item[1].toFixed(2)}`;
+  paymentPanel.classList.add("show");
+  paymentSuccess.classList.remove("show");
+  formMessage.textContent = "Payment instructions are shown below. After sending the money, tap I HAVE MADE PAYMENT.";
+  formMessage.classList.add("show");
+  paymentPanel.scrollIntoView({behavior:"smooth", block:"center"});
+});
 
-  const whatsappUrl = `https://wa.me/${ORDER_WHATSAPP}?text=${encodeURIComponent(orderMessage)}`;
-  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-
-  if (formMessage) {
-    formMessage.textContent = "Your order details are ready. Please send the prepared order message to complete your request.";
-    formMessage.classList.add("show");
-  }
+paidButton.addEventListener("click", () => {
+  paymentSuccess.classList.add("show");
+  formMessage.textContent = "Your payment has been submitted for verification.";
+  formMessage.classList.add("show");
 });
 
 updateTotal();

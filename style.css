@@ -14,9 +14,9 @@ h1{font-size:clamp(44px,7vw,78px);line-height:.98;letter-spacing:-4px;margin-bot
 .bolt{font-size:42px;margin-bottom:8px}.hero-card strong{font-size:28px}.hero-card small{color:var(--muted);margin-top:5px}
 .section{padding:70px 7%;background:var(--soft)}.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}.section-heading h2,.order-card h2{font-size:36px;letter-spacing:-1.5px}.section-heading>p{font-size:13px;color:var(--muted)}
 .bundle-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.bundle{background:#fff;border:1px solid var(--border);border-radius:18px;padding:22px;cursor:pointer;transition:.18s;position:relative}
-.bundle:hover{transform:translateY(-3px);box-shadow:0 10px 25px #00000010;border-color:#ccc}
-.bundle .gb{font-size:28px;font-weight:900}.bundle .price{font-size:20px;font-weight:800;margin:5px 0 16px}.bundle button{width:100%;padding:10px;border:0;border-radius:10px;background:#f0f1f2;font-weight:800;cursor:pointer}
+.bundle{background:linear-gradient(180deg,#fff 0%,#fffdf3 100%);border:1px solid #eadf9d;border-radius:18px;padding:22px;cursor:pointer;transition:.18s;position:relative;overflow:hidden}.bundle:after{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--yellow)}
+.bundle:hover{transform:translateY(-4px);box-shadow:0 12px 28px #00000014;border-color:#e2bd00}.bundle .gb{position:relative;z-index:1}.bundle .price{display:inline-block;background:var(--yellow);padding:4px 9px;border-radius:8px;font-size:19px;font-weight:900;margin:7px 0 16px}.bundle button{width:100%;padding:10px;border:0;border-radius:10px;background:#111;color:#fff;font-weight:800;cursor:pointer}.bundle button:hover{background:#2a2a2a}
+
 .bundle.popular:before{content:"POPULAR";position:absolute;right:12px;top:12px;background:var(--yellow);font-size:9px;font-weight:900;padding:4px 7px;border-radius:99px}
 .order-section{padding:70px 7%;background:#fff}.order-card{max-width:700px;margin:auto;border:1px solid var(--border);border-radius:24px;padding:35px;box-shadow:0 15px 45px #0000000b}.muted{color:var(--muted);margin:7px 0 25px}
 form{display:flex;flex-direction:column;gap:9px}label{font-weight:700;font-size:14px;margin-top:8px}
@@ -32,3 +32,6 @@ footer{padding:35px 7%;background:#111;color:#fff}footer .brand{margin-bottom:8p
 
 .order-message { display:none; margin-top:12px; font-weight:600; }
 .order-message.show { display:block; }
+
+/* Payment panel */
+.payment-panel{display:none;margin-top:20px;border:2px solid var(--yellow);background:#fffdf0;border-radius:18px;padding:22px}.payment-panel.show{display:block}.payment-title{font-size:22px;font-weight:900;margin-bottom:8px}.payment-amount{font-size:32px;font-weight:900;margin:5px 0 16px}.payment-box{background:#fff;border:1px solid #eadf9d;border-radius:14px;padding:16px;margin:12px 0}.payment-number{font-size:25px;font-weight:900;letter-spacing:.5px}.payment-network{display:inline-block;background:var(--yellow);padding:4px 9px;border-radius:999px;font-weight:900;font-size:12px;margin-top:6px}.payment-warning{font-size:13px;font-weight:700;margin:12px 0}.secondary-btn{width:100%;border:0;background:var(--yellow);color:#111;padding:14px 18px;border-radius:12px;font-weight:900;font-size:15px;cursor:pointer}.secondary-btn:hover{background:#f1bd00}.payment-success{display:none;margin-top:12px;padding:12px;border-radius:11px;background:#eaf7ed;border:1px solid #b9dfc0;font-size:13px;font-weight:700}.payment-success.show{display:block}

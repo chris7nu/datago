@@ -64,7 +64,21 @@
             <strong id="total">GH₵0.00</strong>
           </div>
 
-          <button class="primary-btn full" type="submit">SEND ORDER</button>
+          <button class="primary-btn full" type="submit">MAKE PAYMENT</button>
+          <div id="paymentPanel" class="payment-panel" aria-live="polite">
+            <div class="payment-title">💳 Make Payment</div>
+            <p>Send the exact amount shown below to the DATAGO payment number.</p>
+            <div class="payment-amount" id="paymentAmount">GH₵0.00</div>
+            <div class="payment-box">
+              <div>Send payment to:</div>
+              <div class="payment-number">0505002562</div>
+              <span class="payment-network">TELECEL</span>
+              <div style="margin-top:8px;font-weight:800">Name: Mary Korkor</div>
+            </div>
+            <p class="payment-warning">⚠️ This is a <strong>Telecel</strong> number, not an MTN number. Send your payment to the number above.</p>
+            <button id="paidButton" class="secondary-btn" type="button">I HAVE MADE PAYMENT</button>
+            <div id="paymentSuccess" class="payment-success">✅ Payment notification received. DATAGO will verify your payment and process your order. Delivery is normally completed within 1–10 minutes after successful payment.</div>
+          </div>
           <p id="formMessage" class="small order-message" aria-live="polite"></p>
           <p class="small">Your order details will be sent to DATAGO for processing. Payment and delivery will be confirmed with you.</p>
         </form>
